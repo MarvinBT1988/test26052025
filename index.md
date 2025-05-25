@@ -2,7 +2,9 @@
 
 ### Estructura del proyecto
 
-![image](https://github.com/user-attachments/assets/d28fb036-16e9-458a-b755-ba1678f285dd)
+![image](https://github.com/user-attachments/assets/775b6863-3787-4336-8d06-b8e552c193dd)
+
+## IFigura.java
 
 ```java
 package figuras;
@@ -12,7 +14,7 @@ public interface IFigura {
     String obtenerInformacion();
 }
 ```
-![image](https://github.com/user-attachments/assets/4408b437-c25f-4f19-a17d-7c76964c4a3b)
+## ColorForma.java
 
 ```java
 package figuras;
@@ -28,7 +30,7 @@ public enum ColorForma {
 
 ```
 
-![image](https://github.com/user-attachments/assets/d9afb164-f443-4ba6-a423-9dc0c87b2d64)
+## FormaGeometrica.java
 
 ```java
 package figuras;
@@ -72,6 +74,44 @@ public class FormaGeometrica implements IFigura {
         return area;
     }
 
+}
+
+```
+## Circulo.java
+```java
+package figuras;
+
+public class Circulo extends FormaGeometrica {
+    private double radio;
+
+    public Circulo() {
+        super();
+    }
+
+    public Circulo(String nombre, double radio) {
+        super(nombre);
+        this.radio = radio;
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public int obtenerValorArray(int a, int b, int c, int d) {
+        int r = 0;
+        int[] circuloArray = { d, c, b, a };
+        for (int i = 0; i < circuloArray.length; i++) {
+            if (i == 2) {
+                r = circuloArray[i];
+                break;
+            }
+        }
+       return r;
+    }
 }
 
 ```
