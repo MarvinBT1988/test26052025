@@ -224,10 +224,11 @@ public class Rectangulo extends FormaGeometrica {
 
     @Override
     public String obtenerInformacion() {
-        String base = super.getNombre() +" " + this.base;
+        String base = super.obtenerInformacion() +" " + this.base;
         return base;
     }
 }
+
 
 ```
 ## Main.java
